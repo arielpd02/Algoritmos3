@@ -2,7 +2,7 @@
 #include "vector"
 #include "string"
 #include "set"
-
+#include "algorithm"
 using namespace std;
 typedef vector<string> Matriz;
 
@@ -149,30 +149,89 @@ namespace Libro {
     }
 }
 
+typedef pair<int,float> alumno;
+typedef pair<pair<int,int>,float> infoAlumno;
+
+
+namespace Correciones{
+    vector<int> tiempos;
+    vector<int> coef;
+    vector<infoAlumno> infoAlumnos;
+    int cota=1e9+7;
+
+    long long minimoDescontento(int t){
+        long long desc=0;
+        for (infoAlumno i: infoAlumnos) {
+            int tAlumno=i.first.first + t;
+            int coef=i.first.second;
+            desc = (desc + (tAlumno * 1LL * coef) % cota )% cota;
+            t=tAlumno;
+        }
+        return  desc;
+    }
+}
 
 int main() {
-    int tests,N,saldo;
+    int tests,N;
     cin>>tests;
+
     for (int i = 0; i < tests; ++i) {
-        cin>>N>>saldo;
-        Libro:: libro={};
-        Libro:: N=N;
-        Libro:: saldo = saldo;
-        Libro::solucion={};
-        int valor;
+        cin>>N;
+        Correciones::tiempos={};
+        Correciones::coef={};
+        int m,c;
         for (int j = 0; j < N; ++j) {
-            cin>>valor;
-            Libro::libro.push_back(valor);
+            cin>>m;
+            Correciones::tiempos.push_back(m);
         }
-        vector<char> call={};
-
-        Libro::limpiaCuentas(call,0,0);
-
-        for (int j = 0; j < Libro::solucion.size(); ++j) {
-            cout<<Libro::solucion[j];
+        for (int j = 0; j < N; ++j) {
+            cin>>c;
+            Correciones::coef.push_back(c);
         }
+        for (int j = 0; j < N; ++j) {
+            alumno a= make_pair(Correciones::tiempos[j],Correciones::coef[j]);
+            float d= a.first/a.second;
+            infoAlumno i= make_pair(a,d);
+            Correciones::infoAlumnos.push_back(i);
+        }
+        sort(Correciones::infoAlumnos.begin(),Correciones::infoAlumnos.end(),
+             [](pair<alumno , float> b1, pair<alumno , float> b2) { return b1.second < b2.second; });
 
-    }  //Interfaz para el judge
+
+        printf("%lld\n",Correciones::minimoDescontento(0));
+
+    }
+
+    /*
+    for (int j = 0; j < N; ++j) {
+        alumno a= make_pair(Correciones::tiempos[j],Correciones::coef[j]);
+        float d= a.first /a.second;
+        infoAlumno i= make_pair(a,d);
+        Correciones::infoAlumnos.push_back(i);
+    }
+    sort(Correciones::infoAlumnos.begin(),Correciones::infoAlumnos.end(),
+         [](pair<alumno , float> b1, pair<alumno , float> b2) { return b1.second < b2.second; });
+    printf("%d\n", Correciones::minimoDescontento(0,Correciones::infoAlumnos));
+    */ //Interfaz prueba : Correciones
+
+    /*
+    cin>>N>>saldo;
+    Libro:: libro={};
+    Libro:: N=N;
+    Libro:: saldo = saldo;
+    Libro::solucion={};
+    int valor;
+    for (int j = 0; j < N; ++j) {
+        cin>>valor;
+        Libro::libro.push_back(valor);
+    }
+    vector<char> call={};
+
+    Libro::limpiaCuentas(call,0,0);
+
+    for (int j = 0; j < Libro::solucion.size(); ++j) {
+        cout<<Libro::solucion[j];
+    } */ //Interfaz para el judge :Saldo
 
     /*
     Libro::libro={700,1000,100,500,200,1000,200,200,1000};
@@ -182,6 +241,6 @@ int main() {
     Libro::limpiaCuentas(b,0,0);
     for (int i = 0; i < Libro::solucion.size(); ++i) {
         cout<<Libro::solucion[i];
-    }*/ //Interfaz de prueba
+    }*/ //Interfaz de prueba :Saldo
     return 0;
 }

@@ -85,6 +85,9 @@
 		<Unit filename="/mnt/c/Users/Ariel/Desktop/UBA/Algoritmos 3/TP1/script/main.cpp">
 			<Option target="TP1"/>
 		</Unit>
+		<Unit filename="/mnt/c/Users/Ariel/Desktop/UBA/Algoritmos 3/TP1/src/correcciones.hpp">
+			<Option target="TP1"/>
+		</Unit>
 		<Unit filename="/mnt/c/Users/Ariel/Desktop/UBA/Algoritmos 3/TP1/src/saldos.hpp">
 			<Option target="TP1"/>
 		</Unit>
