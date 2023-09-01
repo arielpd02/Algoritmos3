@@ -82,10 +82,13 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/mnt/c/Users/Ariel/Desktop/UBA/Algoritmos 3/TP1/main.cpp">
+		<Unit filename="/mnt/c/Users/Ariel/Desktop/UBA/Algoritmos 3/TP1/script/main.cpp">
 			<Option target="TP1"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/Ariel/Desktop/UBA/Algoritmos 3/TP1/sendero.hpp">
+		<Unit filename="/mnt/c/Users/Ariel/Desktop/UBA/Algoritmos 3/TP1/src/saldos.hpp">
+			<Option target="TP1"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Ariel/Desktop/UBA/Algoritmos 3/TP1/src/sendero.hpp">
 			<Option target="TP1"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/Ariel/Desktop/UBA/Algoritmos 3/TP1/CMakeLists.txt">

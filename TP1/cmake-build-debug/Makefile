@@ -142,32 +142,32 @@ TP1/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TP1.dir/build.make CMakeFiles/TP1.dir/build
 .PHONY : TP1/fast
 
-main.o: main.cpp.o
+script/main.o: script/main.cpp.o
 
-.PHONY : main.o
+.PHONY : script/main.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TP1.dir/build.make CMakeFiles/TP1.dir/main.cpp.o
-.PHONY : main.cpp.o
+script/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TP1.dir/build.make CMakeFiles/TP1.dir/script/main.cpp.o
+.PHONY : script/main.cpp.o
 
-main.i: main.cpp.i
+script/main.i: script/main.cpp.i
 
-.PHONY : main.i
+.PHONY : script/main.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TP1.dir/build.make CMakeFiles/TP1.dir/main.cpp.i
-.PHONY : main.cpp.i
+script/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TP1.dir/build.make CMakeFiles/TP1.dir/script/main.cpp.i
+.PHONY : script/main.cpp.i
 
-main.s: main.cpp.s
+script/main.s: script/main.cpp.s
 
-.PHONY : main.s
+.PHONY : script/main.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TP1.dir/build.make CMakeFiles/TP1.dir/main.cpp.s
-.PHONY : main.cpp.s
+script/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TP1.dir/build.make CMakeFiles/TP1.dir/script/main.cpp.s
+.PHONY : script/main.cpp.s
 
 # Help Target
 help:
@@ -178,9 +178,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... TP1"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... script/main.o"
+	@echo "... script/main.i"
+	@echo "... script/main.s"
 .PHONY : help
 
 

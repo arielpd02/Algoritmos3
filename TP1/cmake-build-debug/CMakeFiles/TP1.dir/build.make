@@ -76,27 +76,27 @@ include CMakeFiles/TP1.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/TP1.dir/flags.make
 
-CMakeFiles/TP1.dir/main.cpp.o: CMakeFiles/TP1.dir/flags.make
-CMakeFiles/TP1.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/c/Users/Ariel/Desktop/UBA/Algoritmos 3/TP1/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/TP1.dir/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TP1.dir/main.cpp.o -c "/mnt/c/Users/Ariel/Desktop/UBA/Algoritmos 3/TP1/main.cpp"
+CMakeFiles/TP1.dir/script/main.cpp.o: CMakeFiles/TP1.dir/flags.make
+CMakeFiles/TP1.dir/script/main.cpp.o: ../script/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/c/Users/Ariel/Desktop/UBA/Algoritmos 3/TP1/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/TP1.dir/script/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TP1.dir/script/main.cpp.o -c "/mnt/c/Users/Ariel/Desktop/UBA/Algoritmos 3/TP1/script/main.cpp"
 
-CMakeFiles/TP1.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TP1.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/c/Users/Ariel/Desktop/UBA/Algoritmos 3/TP1/main.cpp" > CMakeFiles/TP1.dir/main.cpp.i
+CMakeFiles/TP1.dir/script/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TP1.dir/script/main.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/c/Users/Ariel/Desktop/UBA/Algoritmos 3/TP1/script/main.cpp" > CMakeFiles/TP1.dir/script/main.cpp.i
 
-CMakeFiles/TP1.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TP1.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/c/Users/Ariel/Desktop/UBA/Algoritmos 3/TP1/main.cpp" -o CMakeFiles/TP1.dir/main.cpp.s
+CMakeFiles/TP1.dir/script/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TP1.dir/script/main.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/c/Users/Ariel/Desktop/UBA/Algoritmos 3/TP1/script/main.cpp" -o CMakeFiles/TP1.dir/script/main.cpp.s
 
 # Object files for target TP1
 TP1_OBJECTS = \
-"CMakeFiles/TP1.dir/main.cpp.o"
+"CMakeFiles/TP1.dir/script/main.cpp.o"
 
 # External object files for target TP1
 TP1_EXTERNAL_OBJECTS =
 
-TP1: CMakeFiles/TP1.dir/main.cpp.o
+TP1: CMakeFiles/TP1.dir/script/main.cpp.o
 TP1: CMakeFiles/TP1.dir/build.make
 TP1: CMakeFiles/TP1.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/mnt/c/Users/Ariel/Desktop/UBA/Algoritmos 3/TP1/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable TP1"

@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/mnt/c/Users/Ariel/Desktop/UBA/Algoritmos 3/TP1/script/main.cpp" "/mnt/c/Users/Ariel/Desktop/UBA/Algoritmos 3/TP1/cmake-build-debug/CMakeFiles/TP1.dir/script/main.cpp.o"
+  "/mnt/c/Users/Ariel/Desktop/UBA/Algoritmos 3/TP1/tests/test_saldos.cpp" "/mnt/c/Users/Ariel/Desktop/UBA/Algoritmos 3/TP1/cmake-build-debug/CMakeFiles/correrTests.dir/tests/test_saldos.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -14,6 +14,8 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
+  "/mnt/c/Users/Ariel/Desktop/UBA/Algoritmos 3/TP1/cmake-build-debug/CMakeFiles/gtest.dir/DependInfo.cmake"
+  "/mnt/c/Users/Ariel/Desktop/UBA/Algoritmos 3/TP1/cmake-build-debug/CMakeFiles/gtest_main.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.
