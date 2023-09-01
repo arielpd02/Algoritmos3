@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/mnt/c/Users/Ariel/Desktop/UBA/Algoritmos 3/TP1/main.cpp
+iostream
+-
+vector
+/mnt/c/Users/Ariel/Desktop/UBA/Algoritmos 3/TP1/vector
+string
+/mnt/c/Users/Ariel/Desktop/UBA/Algoritmos 3/TP1/string
+set
+/mnt/c/Users/Ariel/Desktop/UBA/Algoritmos 3/TP1/set
+
