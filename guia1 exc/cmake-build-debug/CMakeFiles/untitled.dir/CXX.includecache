@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/mnt/c/Users/Ariel/Desktop/UBA/Algoritmos 3/guia1 exc/ejs_dinamica.hpp
+vector
+/mnt/c/Users/Ariel/Desktop/UBA/Algoritmos 3/guia1 exc/vector
+math.h
+/mnt/c/Users/Ariel/Desktop/UBA/Algoritmos 3/guia1 exc/math.h
+
+/mnt/c/Users/Ariel/Desktop/UBA/Algoritmos 3/guia1 exc/main.cpp
+iostream
+-
+ejs_dinamica.hpp
+/mnt/c/Users/Ariel/Desktop/UBA/Algoritmos 3/guia1 exc/ejs_dinamica.hpp
+

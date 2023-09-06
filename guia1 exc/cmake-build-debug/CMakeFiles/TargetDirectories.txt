@@ -1,0 +1,7 @@
+/mnt/c/Users/Ariel/Desktop/UBA/Algoritmos 3/guia1 exc/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/mnt/c/Users/Ariel/Desktop/UBA/Algoritmos 3/guia1 exc/cmake-build-debug/CMakeFiles/edit_cache.dir
+/mnt/c/Users/Ariel/Desktop/UBA/Algoritmos 3/guia1 exc/cmake-build-debug/CMakeFiles/correrValgrind.dir
+/mnt/c/Users/Ariel/Desktop/UBA/Algoritmos 3/guia1 exc/cmake-build-debug/CMakeFiles/correrTests_ext.dir
+/mnt/c/Users/Ariel/Desktop/UBA/Algoritmos 3/guia1 exc/cmake-build-debug/CMakeFiles/correrTests.dir
+/mnt/c/Users/Ariel/Desktop/UBA/Algoritmos 3/guia1 exc/cmake-build-debug/CMakeFiles/gtest_main.dir
+/mnt/c/Users/Ariel/Desktop/UBA/Algoritmos 3/guia1 exc/cmake-build-debug/CMakeFiles/gtest.dir
