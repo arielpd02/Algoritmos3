@@ -63,10 +63,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/mnt/c/Users/Ariel/Desktop/UBA/Algoritmos 3/TP1"
+CMAKE_SOURCE_DIR = "/mnt/c/Users/Ariel/Desktop/UBA/Algoritmos 3/Algoritmos3_GH/TP1"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/mnt/c/Users/Ariel/Desktop/UBA/Algoritmos 3/TP1/cmake-build-debug"
+CMAKE_BINARY_DIR = "/mnt/c/Users/Ariel/Desktop/UBA/Algoritmos 3/Algoritmos3_GH/TP1/cmake-build-debug"
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -93,14 +93,14 @@ clean: CMakeFiles/TP1.dir/clean
 CMakeFiles/TP1.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TP1.dir/build.make CMakeFiles/TP1.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TP1.dir/build.make CMakeFiles/TP1.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/mnt/c/Users/Ariel/Desktop/UBA/Algoritmos 3/TP1/cmake-build-debug/CMakeFiles" --progress-num=1,2 "Built target TP1"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/mnt/c/Users/Ariel/Desktop/UBA/Algoritmos 3/Algoritmos3_GH/TP1/cmake-build-debug/CMakeFiles" --progress-num=1,2 "Built target TP1"
 .PHONY : CMakeFiles/TP1.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/TP1.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/mnt/c/Users/Ariel/Desktop/UBA/Algoritmos 3/TP1/cmake-build-debug/CMakeFiles" 2
+	$(CMAKE_COMMAND) -E cmake_progress_start "/mnt/c/Users/Ariel/Desktop/UBA/Algoritmos 3/Algoritmos3_GH/TP1/cmake-build-debug/CMakeFiles" 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/TP1.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/mnt/c/Users/Ariel/Desktop/UBA/Algoritmos 3/TP1/cmake-build-debug/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/mnt/c/Users/Ariel/Desktop/UBA/Algoritmos 3/Algoritmos3_GH/TP1/cmake-build-debug/CMakeFiles" 0
 .PHONY : CMakeFiles/TP1.dir/rule
 
 # Convenience name for target.

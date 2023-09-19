@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/guia2.dir/main.cpp.o -o guia2 
