@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/TP2.dir/edificios.cpp.o -o TP2 
