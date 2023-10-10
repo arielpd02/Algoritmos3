@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/mnt/c/Users/Ariel/Desktop/UBA/Algoritmos 3/TP2/edificios.cpp" "/mnt/c/Users/Ariel/Desktop/UBA/Algoritmos 3/TP2/cmake-build-debug/CMakeFiles/TP2.dir/edificios.cpp.o"
+  "/mnt/c/Users/Ariel/Desktop/UBA/Algoritmos 3/Algoritmos3_GH/TP2/edificios.cpp" "/mnt/c/Users/Ariel/Desktop/UBA/Algoritmos 3/Algoritmos3_GH/TP2/cmake-build-debug/CMakeFiles/TP2.dir/edificios.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

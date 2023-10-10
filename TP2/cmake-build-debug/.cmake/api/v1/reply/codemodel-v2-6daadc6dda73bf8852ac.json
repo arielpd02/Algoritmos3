@@ -48,8 +48,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/mnt/c/Users/Ariel/Desktop/UBA/Algoritmos 3/TP2/cmake-build-debug",
-		"source" : "/mnt/c/Users/Ariel/Desktop/UBA/Algoritmos 3/TP2"
+		"build" : "/mnt/c/Users/Ariel/Desktop/UBA/Algoritmos 3/Algoritmos3_GH/TP2/cmake-build-debug",
+		"source" : "/mnt/c/Users/Ariel/Desktop/UBA/Algoritmos 3/Algoritmos3_GH/TP2"
 	},
 	"version" : 
 	{

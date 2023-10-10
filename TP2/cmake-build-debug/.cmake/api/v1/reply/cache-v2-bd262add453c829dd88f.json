@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/mnt/c/Users/Ariel/Desktop/UBA/Algoritmos 3/TP2/cmake-build-debug"
+			"value" : "/mnt/c/Users/Ariel/Desktop/UBA/Algoritmos 3/Algoritmos3_GH/TP2/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -679,7 +679,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/mnt/c/Users/Ariel/Desktop/UBA/Algoritmos 3/TP2"
+			"value" : "/mnt/c/Users/Ariel/Desktop/UBA/Algoritmos 3/Algoritmos3_GH/TP2"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -1247,7 +1247,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/mnt/c/Users/Ariel/Desktop/UBA/Algoritmos 3/TP2/cmake-build-debug"
+			"value" : "/mnt/c/Users/Ariel/Desktop/UBA/Algoritmos 3/Algoritmos3_GH/TP2/cmake-build-debug"
 		},
 		{
 			"name" : "TP2_SOURCE_DIR",
@@ -1259,7 +1259,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/mnt/c/Users/Ariel/Desktop/UBA/Algoritmos 3/TP2"
+			"value" : "/mnt/c/Users/Ariel/Desktop/UBA/Algoritmos 3/Algoritmos3_GH/TP2"
 		}
 	],
 	"kind" : "cache",

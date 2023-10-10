@@ -1,12 +1,11 @@
 #include <bits/stdc++.h>
-#include "cmath"
-
+#include <iomanip>
 using namespace std;
 
 struct Solucion {
-    long  s;
-    long  d_sum;
-    long  r_sum;
+    long long s;
+    int d_sum;
+    int r_sum;
 
     Solucion(): s(0), d_sum(0), r_sum(0) {}
 };
@@ -26,15 +25,14 @@ struct Ady {
 vector<vector<Ady>> graph;
 int T, N, M, ui, vi, di, ri;
 
-int costo(int dst, int r, float C) {
-    float df=dst, rf=r;
-    return df-C*rf;
+int costo(int dst, int r,int C) {
+    return dst-C*r;
 }
 
 //Prim con peso de e = costo
-Solucion prim(float C) {
+Solucion prim(int C) {
     Solucion sol = Solucion();
-    priority_queue<pair<long , Ady>> q;
+    priority_queue<pair<int, Ady>> q;
     vector<bool> visited(N, false);
 
     for (Ady ady : graph[0]) {
@@ -45,7 +43,7 @@ Solucion prim(float C) {
     int edges = 0;
     visited[0] = true;
     while (!q.empty()) {
-        pair<long , Ady> item = q.top(); q.pop();
+        pair<int, Ady> item = q.top(); q.pop();
         int costo_arista = item.first;
         Ady arista = item.second;
 
@@ -53,6 +51,43 @@ Solucion prim(float C) {
             visited[arista.hasta] = true;
             for (Ady ady : graph[arista.hasta]) {
                 int c = costo(ady.di, ady.ri, C);
+                q.push({c, ady});
+            }
+            edges++;
+            sol.s += costo_arista;
+            sol.d_sum += arista.di;
+            sol.r_sum += arista.ri;
+        }
+        if (edges == N - 1) break;
+    }
+    return sol;
+}
+
+long long costoAux(int dst, int r, long long C) {
+    return 1e9*dst-C*r;
+}
+
+Solucion primaux(long long C){
+    Solucion sol = Solucion();
+    priority_queue<pair<long long, Ady>> q;
+    vector<bool> visited(N, false);
+
+    for (Ady ady : graph[0]) {
+        long long c = costoAux(ady.di, ady.ri, C);
+        q.push({c, ady});
+    }
+
+    int edges = 0;
+    visited[0] = true;
+    while (!q.empty()) {
+        pair<long long , Ady> item = q.top(); q.pop();
+        long long costo_arista = item.first;
+        Ady arista = item.second;
+
+        if (!visited[arista.hasta]) {
+            visited[arista.hasta] = true;
+            for (Ady ady : graph[arista.hasta]) {
+                long long c = costoAux(ady.di, ady.ri, C);
                 q.push({c, ady});
             }
             edges++;
@@ -74,27 +109,61 @@ void solve(int cota) {
     while (low + 1 < high) {
         int mid = (low + high) / 2;
         sol = prim(mid);
-
-        if (int(sol.s)> 0) {
+        if (sol.s> 0) {
             low = mid;
-        } else if (int(sol.s) < 0) {
+        } else if (sol.s < 0) {
             high = mid;
         } else {
             break;
         }
     }
-    if (sol.s != 0) { //El C no es entero , busco entre intervalos de 0,10 entre low/high son consecutivos
+    if (sol.s != 0) { //El C no es entero , busco entre low/high tq son consecutivos, con reales normalizados
         //sol=prim(high);
-        //cout<<lowF<<endl;
-        //cout<<"LLegue"<<endl;
-        float part=1.0/100.0;
-        float lowF=low;
-        for (int i = 0; i < 100; ++i) { //Cuando low == high dejo de iterar
+
+        long long sActual=0;
+        long long highL=1e9*high;
+        long long lowL=1e9*low;
+
+        while (sol.s!=0 && lowL+1<highL){ //Itera O(log(10^9)) veces
+            long long mid=(lowL+highL)/2;
+            sol= primaux(mid);
+            if(sol.s>0){
+                lowL=mid;
+            }else if(sol.s<0){
+                highL=mid;
+            }
+        }
+
+        /*
+        float part=1.0/10000.0;
+        float lowF=low,highF=high;
+        int sActual=0;
+        cout<<low<<" "<<high<<endl;
+        */
+        /*
+        while(sol.s!=0 || sActual+sol.s!=0){
+            float midF=(lowF+highF)/2.0;
+            sActual=sol.s;
+            cout<<sActual<<endl;
+            sol= prim(midF);
+            if(sol.s>0){
+                lowF=midF;
+            }else if(sol.s<0){
+                highF=midF;
+            }
+        }
+        */
+        /*
+        // Recorrido lineal de a milesimos
+        for (int i = 0; i < 10000; ++i) { //Cuando low == high dejo de iterar
+            sActual=sol.s;
             lowF+=part;
             sol= prim(lowF);
-            if(sol.s==0) break;
+            if(sol.s==0 || sActual+sol.s==0) break;
         }
+        */
     }
+    //cout<<sol.s<<endl;
     printf("%ld %ld\n", sol.d_sum, sol.r_sum);
 }
 
@@ -113,6 +182,7 @@ int main() {
             graph[ui - 1].push_back(Ady(vi - 1, di, ri));
             graph[vi - 1].push_back(Ady(ui - 1, di, ri));
         }
+
         cota=cota/M;
         //Redondeo para arriba
         cota++;
