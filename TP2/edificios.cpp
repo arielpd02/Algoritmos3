@@ -10,6 +10,14 @@ struct Solucion {
     Solucion(): s(0), d_sum(0), r_sum(0) {}
 };
 
+struct SolucionF{
+    double s;
+    int d_sum;
+    int r_sum;
+
+    SolucionF(): s(0), d_sum(0), r_sum(0) {}
+};
+
 struct Ady {
     int hasta;
     int di;
@@ -100,6 +108,43 @@ Solucion primaux(long long C){
     return sol;
 }
 
+double costoF(int dst, int r,double C) {
+    return dst-C*r;
+}
+
+SolucionF primFloat(double C){
+    SolucionF sol = SolucionF();
+    priority_queue<pair<double, Ady>> q;
+    vector<bool> visited(N, false);
+
+    for (Ady ady : graph[0]) {
+        double c = costoF(ady.di, ady.ri, C);
+        q.push({c, ady});
+    }
+
+    int edges = 0;
+    visited[0] = true;
+    while (!q.empty()) {
+        pair<double, Ady> item = q.top(); q.pop();
+        double costo_arista = item.first;
+        Ady arista = item.second;
+
+        if (!visited[arista.hasta]) {
+            visited[arista.hasta] = true;
+            for (Ady ady : graph[arista.hasta]) {
+                double c = costoF(ady.di, ady.ri, C);
+                q.push({c, ady});
+            }
+            edges++;
+            sol.s += costo_arista;
+            sol.d_sum += arista.di;
+            sol.r_sum += arista.ri;
+        }
+        if (edges == N - 1) break;
+    }
+    return sol;
+}
+
 //Binary search del C optimo
 void solve(int cota) {
     int low = 0;
@@ -120,6 +165,8 @@ void solve(int cota) {
     if (sol.s != 0) { //El C no es entero , busco entre low/high tq son consecutivos, con reales normalizados
         //sol=prim(high);
 
+        /*
+
         long long sActual=0;
         long long highL=1e9*high;
         long long lowL=1e9*low;
@@ -133,28 +180,37 @@ void solve(int cota) {
                 highL=mid;
             }
         }
-
-        /*
-        float part=1.0/10000.0;
-        float lowF=low,highF=high;
-        int sActual=0;
-        cout<<low<<" "<<high<<endl;
         */
-        /*
-        while(sol.s!=0 || sActual+sol.s!=0){
-            float midF=(lowF+highF)/2.0;
-            sActual=sol.s;
-            cout<<sActual<<endl;
-            sol= prim(midF);
-            if(sol.s>0){
+
+        //Busqueda entre reales de low-high
+        float lowF=low,highF=high;
+        float sActual=0;
+        //cout<<low<<" "<<high<<endl;
+        SolucionF solF=SolucionF();
+        solF.s=sol.s;
+        solF.r_sum=sol.r_sum;
+        solF.d_sum=sol.d_sum;
+
+        while(int(solF.s)!=0 || int(sActual+solF.s)!=0){
+            double midF=(lowF+highF)/2.0;
+            sActual=solF.s;
+            //cout<<sActual<<endl;
+            solF = primFloat(midF);
+            if(solF.s>0){
                 lowF=midF;
-            }else if(sol.s<0){
+            }else if(solF.s<0){
                 highF=midF;
             }
         }
-        */
+
+        sol.s=solF.s;
+        sol.d_sum=solF.d_sum;
+        sol.r_sum=solF.r_sum;
+
         /*
         // Recorrido lineal de a milesimos
+         float part=1.0/10000.0;
+        float lowF=low,highF=high;
         for (int i = 0; i < 10000; ++i) { //Cuando low == high dejo de iterar
             sActual=sol.s;
             lowF+=part;
@@ -163,8 +219,8 @@ void solve(int cota) {
         }
         */
     }
-    //cout<<sol.s<<endl;
-    printf("%ld %ld\n", sol.d_sum, sol.r_sum);
+    cout<<sol.s<<endl;
+    printf("%d %d\n", sol.d_sum, sol.r_sum);
 }
 
 
