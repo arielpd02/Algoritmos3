@@ -166,7 +166,6 @@ void solve(int cota) {
         //sol=prim(high);
 
         /*
-
         long long sActual=0;
         long long highL=1e9*high;
         long long lowL=1e9*low;
@@ -185,13 +184,13 @@ void solve(int cota) {
         //Busqueda entre reales de low-high
         float lowF=low,highF=high;
         float sActual=0;
-        //cout<<low<<" "<<high<<endl;
         SolucionF solF=SolucionF();
         solF.s=sol.s;
         solF.r_sum=sol.r_sum;
         solF.d_sum=sol.d_sum;
 
-        while(int(solF.s)!=0 || int(sActual+solF.s)!=0){
+        //|| int(sActual+solF.s)!=0
+        while(int(solF.s)!=0){
             double midF=(lowF+highF)/2.0;
             sActual=solF.s;
             //cout<<sActual<<endl;
@@ -219,7 +218,7 @@ void solve(int cota) {
         }
         */
     }
-    cout<<sol.s<<endl;
+    //cout<<sol.s<<endl;
     printf("%d %d\n", sol.d_sum, sol.r_sum);
 }
 
