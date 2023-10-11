@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/mnt/c/Users/Ariel/Desktop/UBA/Algoritmos 3/Algoritmos3_GH/TP2/edificios.cpp
+bits/stdc++.h
+-
+iomanip
+-
+
